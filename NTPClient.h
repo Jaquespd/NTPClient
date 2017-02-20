@@ -62,6 +62,13 @@ class NTPClient {
     int getHours();
     int getMinutes();
     int getSeconds();
+    
+    /**
+     * This will force the update from the user.
+     *
+     * @return true on success, false on failure
+     */
+    bool NTPClient::userUpdate(unsigned long userEpoc);
 
     /**
      * Changes the time offset. Useful for changing timezones dynamically
