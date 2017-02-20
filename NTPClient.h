@@ -68,7 +68,7 @@ class NTPClient {
      *
      * @return true on success, false on failure
      */
-    bool NTPClient::userUpdate(unsigned long userEpoc);
+    bool userUpdate(unsigned long userEpoc);
 
     /**
      * Changes the time offset. Useful for changing timezones dynamically
