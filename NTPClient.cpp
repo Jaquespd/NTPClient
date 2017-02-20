@@ -94,7 +94,7 @@ bool NTPClient::forceUpdate() {
 
 bool NTPClient::userUpdate(unsigned long userEpoc) {
   this->_lastUpdate = millis();
-  this->_currentEpoc = userEpoc;
+  this->_currentEpoc = userEpoc - this->_timeOffset;
 
   return true;
 }
