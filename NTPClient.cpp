@@ -92,6 +92,13 @@ bool NTPClient::forceUpdate() {
   return true;
 }
 
+bool NTPClient::userUpdate(unsigned long userEpoc) {
+  this->_lastUpdate = millis();
+  this->_currentEpoc = userEpoc;
+
+  return true;
+}
+
 bool NTPClient::update() {
   if ((millis() - this->_lastUpdate >= this->_updateInterval)     // Update after _updateInterval
     || this->_lastUpdate == 0) {                                // Update if there was no update yet.
